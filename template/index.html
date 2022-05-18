@@ -17,10 +17,10 @@
     <div class="container">
         <div class="row border">
             <div class="col d-flex align-items-center">
-                <form>
+                <form name="form1">
                     <div class="form-row">
                         <div class="col">
-                            <input type="text" id="charName" name="form-control" placeholder="">
+                            <input type="text" id="charName" name="chararcterName" placeholder="">
                             <h6>Character name</h6>
                         </div>
                     </div>
@@ -28,44 +28,45 @@
             </div>
             <div class="col-md-6">
                 <div class="container row pt-3">
-                    <form>
+                    <form name="form2">
                         <div class="form-row">
                             <div class="col">
-                                <input type="text" id="classLvl" class="form-control" placeholder="">
+                                <input type="text" id="classLvl" name="class&lvl" class="form-control" placeholder="">
                                 <h6>Class & level</h6>
                             </div>
                             <div class="col">
-                                <input type="text" id="background" class="form-control" placeholder="">
+                                <input type="text" id="background" name="background" class="form-control" placeholder="">
                                 <h6>Background</h6>
                             </div>
                             <div class="col">
-                                <input type="text" id="playerName" class="form-control" placeholder="">
+                                <input type="text" id="playerName" name="playerName"class="form-control" placeholder="">
                                 <h6>Player name</h6>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col">
-                                <input type="text" id="race" class="form-control" placeholder="">
+                                <input type="text" id="race" name="race" class="form-control" placeholder="">
                                 <h6>Race</h6>
                             </div>
                             <div class="col">
-                                <input type="text" id="alignment" class="form-control" placeholder="">
+                                <input type="text" id="alignment" name="alignment" class="form-control" placeholder="">
                                 <h6>Alignment</h6>
                             </div>
                             <div class="col">
-                                <input type="text" id="expPoints" class="form-control" placeholder="">
+                                <input type="text" id="expPoints" name="expPoints" class="form-control" placeholder="">
                                 <h6>Experience points</h6>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="cotainer">
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
                         <button class="btn btn-dark" id="save">save</button>
                         <button class="btn btn-dark" id="load">load</button>
                         <button class="btn btn-dark" id="clear">clear</button>
+                        <button class="btn btn-dark" id="json">json</button>
                     </div>
                 </div>
             </div>
