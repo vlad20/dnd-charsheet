@@ -1,10 +1,13 @@
 $(document).ready(function () {
-  $("#save").on("click", function () {
+  function save() {
     $('input[type="text"]').each(function () {
       let id = $(this).attr("id");
       let value = $(this).val();
       localStorage.setItem(id, value);
     });
+  }
+  $("#save").on("click", function () {
+    save();
   });
 
   $("#load").on("click", function () {
@@ -12,25 +15,26 @@ $(document).ready(function () {
       let id = $(this).attr("id");
       let value = localStorage.getItem(id);
       $(this).val(value);
+      console.log($(this).val(value));
     });
   });
 
   $("#clear").on("click", function () {
     $('input[type="text"]').each(function () {
-      $('form :input').val('');
+      $("form :input").val("");
     });
   });
-  
-  $("#json").on("click", function ( event ) {
-    let form = $('form').serializeArray();
+
+  $("#json").on("click", function (event) {
+    let form = $("form").serializeArray();
     console.log(form);
     let jsonForm = JSON.stringify(form);
     let fileBlob = new Blob([jsonForm], {
-      type: 'data:text/json;charset=utf-8'
+      type: "data:text/json;charset=utf-8",
     });
     let temp_anchor = document.createElement("a");
     temp_anchor.style = "display: none";
-    let fileBlobURL = URL.createObjectURL(fileBlob); 
+    let fileBlobURL = URL.createObjectURL(fileBlob);
     temp_anchor.href = fileBlobURL;
     temp_anchor.download = "charsheet.json";
     temp_anchor.click();
@@ -38,7 +42,84 @@ $(document).ready(function () {
     temp_anchor.remove();
     console.log(jsonForm);
     event.preventDefault();
-  })
+  });
 
+  console.log(localStorage.getItem("str"));
+  $("#calc").on("click", function () {
+    // let scores = $('form[name="abilityScores"]').serializeArray();
+    // console.log(scores);
+    // $('#str').change(function(){
+
+    let test = localStorage.getItem("str");
+
+    if (Math.floor((test - 10) / 2) >= 0) {
+      $('[name="strMod"]').val("+" + Math.floor((test - 10) / 2));
+    } else {
+      $('[name="strMod"]').val(Math.floor((test - 10) / 2));
+    }
+    // $('[name="strMod"]').val('+' + Math.floor((test - 10)/2));
+    // })
+  });
+
+  $("#str").change(function () {
+    save();
+    let modifier = localStorage.getItem("str");
+    if (Math.floor((modifier - 10) / 2) >= 0) {
+      $('[name="strMod"]').val("+" + Math.floor((modifier - 10) / 2));
+    } else {
+      $('[name="strMod"]').val(Math.floor((modifier - 10) / 2));
+    }
+  });
   
+
+  $("#dex").change(function () {
+    save();
+    let modifier = localStorage.getItem("dex");
+    if (Math.floor((modifier - 10) / 2) >= 0) {
+      $('[name="dexMod"]').val("+" + Math.floor((modifier - 10) / 2));
+    } else {
+      $('[name="dexMod"]').val(Math.floor((modifier - 10) / 2));
+    }
+  });
+
+  $("#con").change(function () {
+    save();
+    let modifier = localStorage.getItem("con");
+    if (Math.floor((modifier - 10) / 2) >= 0) {
+      $('[name="conMod"]').val("+" + Math.floor((modifier - 10) / 2));
+    } else {
+      $('[name="conMod"]').val(Math.floor((modifier - 10) / 2));
+    }
+  });
+
+  $("#int").change(function () {
+    save();
+    let modifier = localStorage.getItem("int");
+    if (Math.floor((modifier - 10) / 2) >= 0) {
+      $('[name="intMod"]').val("+" + Math.floor((modifier - 10) / 2));
+    } else {
+      $('[name="intMod"]').val(Math.floor((modifier - 10) / 2));
+    }
+  });
+
+  $("#wis").change(function () {
+    save();
+    let modifier = localStorage.getItem("wis");
+    if (Math.floor((modifier - 10) / 2) >= 0) {
+      $('[name="wisMod"]').val("+" + Math.floor((modifier - 10) / 2));
+    } else {
+      $('[name="wisMod"]').val(Math.floor((modifier - 10) / 2));
+    }
+  });
+
+  $("#cha").change(function () {
+    save();
+    let modifier = localStorage.getItem("cha");
+    if (Math.floor((modifier - 10) / 2) >= 0) {
+      $('[name="chaMod"]').val("+" + Math.floor((modifier - 10) / 2));
+    } else {
+      $('[name="chaMod"]').val(Math.floor((modifier - 10) / 2));
+    }
+  });
+
 });

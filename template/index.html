@@ -35,11 +35,13 @@
                                 <h6>Class & level</h6>
                             </div>
                             <div class="col">
-                                <input type="text" id="background" name="background" class="form-control" placeholder="">
+                                <input type="text" id="background" name="background" class="form-control"
+                                    placeholder="">
                                 <h6>Background</h6>
                             </div>
                             <div class="col">
-                                <input type="text" id="playerName" name="playerName"class="form-control" placeholder="">
+                                <input type="text" id="playerName" name="playerName" class="form-control"
+                                    placeholder="">
                                 <h6>Player name</h6>
                             </div>
                         </div>
@@ -62,44 +64,51 @@
             </div>
             <div class="row container">
                 <div class="col-sm-1">
-                    <form>
+                    <form name="abilityScores">
                         <div class="form-row">
-                            <div class="col container">
+                            <div class="col">
                                 <h6>Strength</h6>
-                                <input type="text" id="classLvl" name="class&lvl" class="form-control" placeholder="">
-                                <input class="w-50 form-control form-control-sm d-flex justify-content-center" type="text">
+                                <input type="text" id="str" name="strScore" class="form-control text-center"
+                                    placeholder="">
+                                <input name="strMod" class="w-75 form-control form-control-sm mx-auto text-center"
+                                    type="text">
                             </div>
                             <div class="col">
                                 <h6>Dexterity</h6>
-                                <input type="text" id="classLvl" name="class&lvl" class="form-control" placeholder="">
-                                 <input class="form-control form-control-sm" type="text">
+                                <input type="text" id="dex" name="dexScore" class="form-control text-center"
+                                    placeholder="">
+                                <input name="dexMod" class="w-75 form-control form-control-sm mx-auto text-center" type="text">
                             </div>
                             <div class="col">
                                 <h6>Constitution</h6>
-                                <input type="text" id="classLvl" name="class&lvl" class="form-control" placeholder="">
-                                 <input class="form-control form-control-sm" type="text">
+                                <input type="text" id="con" name="conScore" class="form-control text-center"
+                                    placeholder="">
+                                <input name="conMod" class="w-75 form-control form-control-sm mx-auto text-center" type="text">
                             </div>
                             <div class="col">
                                 <h6>Intelligence</h6>
-                                <input type="text" id="classLvl" name="class&lvl" class="form-control" placeholder="">
-                                 <input class="form-control form-control-sm" type="text">
+                                <input type="text" id="int" name="intScore" class="form-control text-center"
+                                    placeholder="">
+                                <input name="intMod" class="w-75 form-control form-control-sm mx-auto text-center" type="text">
                             </div>
                             <div class="col">
                                 <h6>Wisdom</h6>
-                                <input type="text" id="classLvl" name="class&lvl" class="form-control" placeholder="">
-                                 <input class="form-control form-control-sm" type="text">
+                                <input type="text" id="wis" name="wisScore" class="form-control text-center"
+                                    placeholder="">
+                                <input name="wisMod" class="w-75 form-control form-control-sm mx-auto text-center" type="text">
                             </div>
                             <div class="col">
                                 <h6>Charisma</h6>
-                                <input type="text" id="classLvl" name="class&lvl" class="form-control" placeholder="">
-                                 <input class="form-control form-control-sm" type="text">
+                                <input type="text" id="cha" name="chaScore" class="form-control text-center"
+                                    placeholder="">
+                                <input name="chaMod" class="w-75 form-control form-control-sm mx-auto text-center" type="text">
                             </div>
                         </div>
                     </form>
-    
+
                 </div>
             </div>
-            
+
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
@@ -107,6 +116,7 @@
                         <button class="btn btn-dark" id="load">load</button>
                         <button class="btn btn-dark" id="clear">clear</button>
                         <button class="btn btn-dark" id="json">json</button>
+                        <button class="btn btn-dark" id="calc">calc</button>
                     </div>
                 </div>
             </div>
