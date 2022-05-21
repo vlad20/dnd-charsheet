@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
 
     <title>dnd char sheet</title>
 </head>
@@ -66,63 +67,85 @@
                 <div class="col-sm-1">
                     <form name="abilityScores">
                         <div class="form-row">
-                            <div class="col">
-                                <h6>Strength</h6>
+                            <div class="col mb-2">
+                                <label>Strength</label>
                                 <input type="text" id="str" name="strScore" class="form-control text-center"
                                     placeholder="">
                                 <input name="strMod" class="w-75 form-control form-control-sm mx-auto text-center"
                                     type="text">
                             </div>
-                            <div class="col">
-                                <h6>Dexterity</h6>
+                            <div class="col mb-2">
+                                <label>Dexterity</label>
                                 <input type="text" id="dex" name="dexScore" class="form-control text-center"
                                     placeholder="">
-                                <input name="dexMod" class="w-75 form-control form-control-sm mx-auto text-center" type="text">
+                                <input name="dexMod" class="w-75 form-control form-control-sm mx-auto text-center"
+                                    type="text">
                             </div>
-                            <div class="col">
-                                <h6>Constitution</h6>
+                            <div class="col mb-2">
+                                <label>Constitution</label>
                                 <input type="text" id="con" name="conScore" class="form-control text-center"
                                     placeholder="">
-                                <input name="conMod" class="w-75 form-control form-control-sm mx-auto text-center" type="text">
+                                <input name="conMod" class="w-75 form-control form-control-sm mx-auto text-center"
+                                    type="text">
                             </div>
-                            <div class="col">
-                                <h6>Intelligence</h6>
+                            <div class="col mb-2">
+                                <label>Intelligence</label>
                                 <input type="text" id="int" name="intScore" class="form-control text-center"
                                     placeholder="">
-                                <input name="intMod" class="w-75 form-control form-control-sm mx-auto text-center" type="text">
+                                <input name="intMod" class="w-75 form-control form-control-sm mx-auto text-center"
+                                    type="text">
                             </div>
-                            <div class="col">
-                                <h6>Wisdom</h6>
+                            <div class="col mb-2">
+                                <label>Wisdom</label>
                                 <input type="text" id="wis" name="wisScore" class="form-control text-center"
                                     placeholder="">
-                                <input name="wisMod" class="w-75 form-control form-control-sm mx-auto text-center" type="text">
+                                <input name="wisMod" class="w-75 form-control form-control-sm mx-auto text-center"
+                                    type="text">
                             </div>
-                            <div class="col">
-                                <h6>Charisma</h6>
+                            <div class="col mb-2">
+                                <label>Charisma</label>
                                 <input type="text" id="cha" name="chaScore" class="form-control text-center"
                                     placeholder="">
-                                <input name="chaMod" class="w-75 form-control form-control-sm mx-auto text-center" type="text">
+                                <input name="chaMod" class="w-75 form-control form-control-sm mx-auto text-center"
+                                    type="text">
                             </div>
                         </div>
                     </form>
-
                 </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <button class="btn btn-dark" id="save">save</button>
-                        <button class="btn btn-dark" id="load">load</button>
-                        <button class="btn btn-dark" id="clear">clear</button>
-                        <button class="btn btn-dark" id="json">json</button>
-                        <button class="btn btn-dark" id="calc">calc</button>
+                <div class="col-sm-2">
+                    <div class="form-row">
+                        <div class="col mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="inspCheck">
+                                <label class="form-check-label " for="inspirationCheck">
+                                    Inspiration
+                                </label>
+                            </div>
+                            <!-- <div class="form-check">
+                                <div class="inut-group"></div>
+                               
+                            </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <button class="btn btn-dark" id="save">save</button>
+                    <button class="btn btn-dark" id="load">load</button>
+                    <button class="btn btn-dark" id="clear">clear</button>
+                    <button class="btn btn-dark" id="json">json</button>
+                    <button class="btn btn-dark" id="calc">calc</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

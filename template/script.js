@@ -44,22 +44,7 @@ $(document).ready(function () {
     event.preventDefault();
   });
 
-  console.log(localStorage.getItem("str"));
-  $("#calc").on("click", function () {
-    // let scores = $('form[name="abilityScores"]').serializeArray();
-    // console.log(scores);
-    // $('#str').change(function(){
-
-    let test = localStorage.getItem("str");
-
-    if (Math.floor((test - 10) / 2) >= 0) {
-      $('[name="strMod"]').val("+" + Math.floor((test - 10) / 2));
-    } else {
-      $('[name="strMod"]').val(Math.floor((test - 10) / 2));
-    }
-    // $('[name="strMod"]').val('+' + Math.floor((test - 10)/2));
-    // })
-  });
+ 
 
   $("#str").change(function () {
     save();
