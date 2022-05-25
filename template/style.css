@@ -2,5 +2,7 @@ label {
     display: block;
     text-align: center;
     font-size: 11px;
-    /* font-style: bold; */
+}
+input[type=checkbox] {
+    transform: scale(1.5);
 }
